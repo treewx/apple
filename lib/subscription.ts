@@ -36,9 +36,9 @@ export async function getUserAccessStatus(userId: string): Promise<AccessStatus>
   const now = new Date()
   const isTrialActive = user.trialEndsAt > now
   const activeSubscription = user.subscriptions[0]
-  const isSubscriptionActive = activeSubscription && 
+  const isSubscriptionActive = Boolean(activeSubscription && 
     activeSubscription.stripeCurrentPeriodEnd && 
-    activeSubscription.stripeCurrentPeriodEnd > now
+    activeSubscription.stripeCurrentPeriodEnd > now)
 
   const hasAccess = isTrialActive || isSubscriptionActive
 
