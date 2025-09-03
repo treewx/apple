@@ -7,7 +7,7 @@ import { StripeCheckout } from '@/components/StripeCheckout'
 const plans = [
   {
     name: 'Starter',
-    priceId: 'price_starter', // Replace with your actual Stripe Price ID
+    paymentLink: 'https://buy.stripe.com/test_7sYcMY3p41xXbmNgOs18c03',
     amount: '$9/month',
     features: [
       'Basic features',
@@ -18,7 +18,7 @@ const plans = [
   },
   {
     name: 'Pro',
-    priceId: 'price_pro', // Replace with your actual Stripe Price ID
+    paymentLink: '', // Add your Pro plan payment link here
     amount: '$29/month',
     features: [
       'All Starter features',
@@ -30,7 +30,7 @@ const plans = [
   },
   {
     name: 'Enterprise',
-    priceId: 'price_enterprise', // Replace with your actual Stripe Price ID
+    paymentLink: '', // Add your Enterprise plan payment link here
     amount: '$99/month',
     features: [
       'All Pro features',
@@ -137,16 +137,25 @@ export default function SubscriptionsPage() {
                 ))}
               </ul>
 
-              <StripeCheckout
-                priceId={plan.priceId}
-                planName={plan.name}
-                amount={plan.amount}
-                className={`w-full text-center px-4 py-2 rounded-lg font-semibold transition-colors ${
-                  index === 1
-                    ? 'bg-primary-600 hover:bg-primary-700 text-white'
-                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                }`}
-              />
+              {plan.paymentLink ? (
+                <a
+                  href={plan.paymentLink}
+                  className={`w-full text-center px-4 py-2 rounded-lg font-semibold transition-colors block ${
+                    index === 1
+                      ? 'bg-primary-600 hover:bg-primary-700 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
+                >
+                  Subscribe to {plan.name}
+                </a>
+              ) : (
+                <button
+                  disabled
+                  className="w-full text-center px-4 py-2 rounded-lg font-semibold bg-gray-200 text-gray-500 cursor-not-allowed"
+                >
+                  Coming Soon
+                </button>
+              )}
             </div>
           ))}
         </div>
