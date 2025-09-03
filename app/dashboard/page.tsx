@@ -2,6 +2,14 @@
 
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+
+type AccessStatus = {
+  hasAccess: boolean
+  isTrialActive: boolean
+  isSubscriptionActive: boolean
+  daysLeft?: number
+}
 
 const stats = [
   { name: 'Total Orders', value: '12', change: '+4.75%', changeType: 'positive' },
@@ -19,6 +27,25 @@ const recentActivity = [
 
 export default function DashboardPage() {
   const { data: session, status } = useSession()
+  const [accessStatus, setAccessStatus] = useState<AccessStatus | null>(null)
+
+  useEffect(() => {
+    async function checkAccess() {
+      if (!session?.user?.id) return
+
+      try {
+        const response = await fetch('/api/subscription/status')
+        if (response.ok) {
+          const status = await response.json()
+          setAccessStatus(status)
+        }
+      } catch (error) {
+        console.error('Failed to check subscription status:', error)
+      }
+    }
+
+    checkAccess()
+  }, [session?.user?.id])
 
   if (status === 'loading') {
     return (
@@ -75,6 +102,59 @@ export default function DashboardPage() {
             Here's what's happening with your business today.
           </p>
         </div>
+
+        {/* Subscription Status Banner */}
+        {accessStatus && !accessStatus.isSubscriptionActive && accessStatus.isTrialActive && (
+          <div className="mb-6 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-yellow-600 text-sm font-semibold">!</span>
+                </div>
+                <div>
+                  <p className="text-yellow-800 font-medium">
+                    Free Trial - {accessStatus.daysLeft} day{accessStatus.daysLeft !== 1 ? 's' : ''} remaining
+                  </p>
+                  <p className="text-yellow-700 text-sm">
+                    Subscribe now to continue accessing all features after your trial ends.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/dashboard/subscriptions"
+                className="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-lg text-sm font-medium"
+              >
+                Subscribe
+              </Link>
+            </div>
+          </div>
+        )}
+
+        {accessStatus && !accessStatus.hasAccess && (
+          <div className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center">
+                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-3">
+                  <span className="text-red-600 text-sm font-semibold">!</span>
+                </div>
+                <div>
+                  <p className="text-red-800 font-medium">
+                    Trial Expired
+                  </p>
+                  <p className="text-red-700 text-sm">
+                    Subscribe to regain access to all features.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/dashboard/subscriptions"
+                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium"
+              >
+                Subscribe
+              </Link>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {stats.map((stat) => (

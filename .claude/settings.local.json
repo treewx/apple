@@ -13,7 +13,15 @@
       "Bash(git commit:*)",
       "Bash(git remote add:*)",
       "Bash(git branch:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(npx prisma:*)",
+      "Bash(set DATABASE_URL=postgresql://postgres:yXnTnywdTmJjFSqdfGNcEiAvagmqmYOo@postgres.railway.internal:5432/railway)",
+      "Bash(set DATABASE_URL=postgresql://postgres:yXnTnywdTmJjFSqdfGNcEiAvagmqmYOo@switchyard.proxy.rlwy.net:20935/railway)",
+      "Bash(npx dotenv -e .env.local -- npx prisma migrate dev:*)",
+      "Bash(npm run:*)"
     ],
     "deny": [],
     "ask": []

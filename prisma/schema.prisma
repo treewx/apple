@@ -41,6 +41,7 @@ model User {
   emailVerified   DateTime?
   image           String?
   hashedPassword  String?
+  trialEndsAt     DateTime  @default(dbgenerated("now() + interval '14 days'"))
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
 
