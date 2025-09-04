@@ -83,9 +83,6 @@ export default function DashboardPage() {
     }
   }
 
-  const handleCapture = () => {
-    audioService?.generateBeepSound(1000, 100)
-  }
 
   if (status === 'loading') {
     return (
@@ -219,7 +216,7 @@ export default function DashboardPage() {
 
       {/* Chinese Learning App */}
       <main className="relative w-full h-screen overflow-hidden">
-        <Viewfinder onCapture={handleCapture}>
+        <Viewfinder>
           <div className="w-full max-w-md mx-auto space-y-6">
             <div className="text-center mb-6">
               <h1 className="text-white text-2xl font-bold mb-2">

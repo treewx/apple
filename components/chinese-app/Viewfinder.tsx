@@ -3,23 +3,16 @@
 import { useState, useRef, useEffect } from 'react'
 
 interface ViewfinderProps {
-  onCapture?: () => void;
   children?: React.ReactNode;
 }
 
-export default function Viewfinder({ onCapture, children }: ViewfinderProps) {
+export default function Viewfinder({ children }: ViewfinderProps) {
   const [isActive, setIsActive] = useState(false)
   const viewfinderRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setIsActive(true)
   }, [])
-
-  const handleCapture = () => {
-    if (onCapture) {
-      onCapture()
-    }
-  }
 
   return (
     <div className="relative w-full h-screen bg-black overflow-hidden">
@@ -56,12 +49,6 @@ export default function Viewfinder({ onCapture, children }: ViewfinderProps) {
           </div>
         )}
 
-        <button
-          onClick={handleCapture}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white rounded-full border-4 border-gray-300 hover:border-blue-400 transition-colors duration-200 shadow-lg"
-        >
-          <div className="w-full h-full bg-red-500 rounded-full scale-75 hover:scale-90 transition-transform duration-200"></div>
-        </button>
       </div>
     </div>
   )

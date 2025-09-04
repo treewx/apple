@@ -16,7 +16,7 @@ export default function ChineseDisplay({ translation, onPlayAudio }: ChineseDisp
   }
 
   return (
-    <div className="w-full max-w-lg mx-auto p-6 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl">
+    <div className="w-full max-w-2xl mx-auto p-6 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl">
       <div className="text-center space-y-6">
         <div className="space-y-3">
           <div className="text-6xl font-bold text-gray-800 leading-tight">
@@ -65,27 +65,27 @@ export default function ChineseDisplay({ translation, onPlayAudio }: ChineseDisp
         </div>
 
         {selectedWord && (
-          <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
-            <div className="flex items-center justify-center space-x-4">
+          <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
+            <div className="flex flex-col items-center space-y-4">
               {selectedWord.imageUrl ? (
                 <img 
                   src={selectedWord.imageUrl} 
                   alt={selectedWord.meaning}
-                  className="w-20 h-20 object-cover rounded-lg shadow-md"
+                  className="w-80 h-80 object-cover rounded-xl shadow-lg"
                 />
               ) : (
-                <div className="w-20 h-20 bg-gray-200 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">🔤</span>
+                <div className="w-80 h-80 bg-gray-200 rounded-xl flex items-center justify-center">
+                  <span className="text-8xl">🔤</span>
                 </div>
               )}
-              <div className="text-left flex-1">
-                <div className="text-2xl font-bold text-blue-800 mb-1">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-800 mb-2">
                   {selectedWord.chinese}
                 </div>
-                <div className="text-lg text-blue-600 mb-1">
+                <div className="text-xl text-blue-600 mb-2">
                   {selectedWord.pinyin}
                 </div>
-                <div className="text-blue-700">
+                <div className="text-lg text-blue-700">
                   means "{selectedWord.meaning}"
                 </div>
               </div>

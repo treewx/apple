@@ -58,7 +58,9 @@
       "Read(/D:\\DEdward\\Projects2\\template\\components\\chinese-app/**)",
       "Read(/D:\\DEdward\\Projects2\\template\\components\\chinese-app/**)",
       "Read(/D:\\DEdward\\Projects2\\template\\components\\chinese-app/**)",
-      "Read(/D:\\DEdward\\Projects2\\template\\app\\api\\translate/**)"
+      "Read(/D:\\DEdward\\Projects2\\template\\app\\api\\translate/**)",
+      "Read(/D:\\DEdward\\Projects2\\template\\components\\chinese-app/**)",
+      "Read(/D:\\DEdward\\Projects2\\template\\components\\chinese-app/**)"
     ],
     "deny": [],
     "ask": []
