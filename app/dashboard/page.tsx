@@ -107,7 +107,10 @@ export default function DashboardPage() {
                 </Link>
                 <nav className="flex space-x-8">
                   <Link href="/dashboard" className="text-primary-600 border-b-2 border-primary-600 py-2">
-                    Chinese App
+                    Practice
+                  </Link>
+                  <Link href="/dashboard/hsk" className="text-gray-500 hover:text-gray-700 py-2">
+                    HSK Courses
                   </Link>
                   <Link href="/dashboard/subscriptions" className="text-gray-500 hover:text-gray-700 py-2">
                     Subscriptions
@@ -164,7 +167,10 @@ export default function DashboardPage() {
               </Link>
               <nav className="flex space-x-6">
                 <Link href="/dashboard" className="text-white border-b-2 border-white py-2">
-                  Chinese App
+                  Practice
+                </Link>
+                <Link href="/dashboard/hsk" className="text-white/80 hover:text-white py-2">
+                  HSK Courses
                 </Link>
                 <Link href="/dashboard/subscriptions" className="text-white/80 hover:text-white py-2">
                   Subscriptions
