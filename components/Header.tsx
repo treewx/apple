@@ -12,19 +12,19 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold text-primary-600">
-              🍎 Apple Orchard
+              🇨🇳 Learn Chinese Easy
             </Link>
           </div>
 
           <nav className="hidden md:flex space-x-8">
             <Link href="#features" className="text-gray-600 hover:text-primary-600">
-              Varieties
+              How It Works
             </Link>
             <Link href="#pricing" className="text-gray-600 hover:text-primary-600">
-              Packages
+              Pricing
             </Link>
             <Link href="/about" className="text-gray-600 hover:text-primary-600">
-              Our Orchard
+              About
             </Link>
           </nav>
 
@@ -58,7 +58,7 @@ export function Header() {
                   href="/auth/signup"
                   className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md"
                 >
-                  Order Now
+                  Start Learning
                 </Link>
               </>
             )}

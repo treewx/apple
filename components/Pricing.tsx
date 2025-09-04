@@ -2,48 +2,22 @@ import Link from 'next/link'
 
 const plans = [
   {
-    name: 'Family Pack',
-    price: '$15',
-    description: 'Perfect for small families',
+    name: 'Learn Chinese Easy',
+    price: '$5',
+    description: 'Everything you need to master Mandarin',
     features: [
-      '5 lbs of mixed apple varieties',
-      'Free home delivery',
-      'Freshness guarantee',
-      'Basic customer support',
+      'AI-powered visual learning system',
+      'Native pronunciation audio',
+      'Progress tracking & analytics',
+      'Spaced repetition algorithm',
+      'Cultural context lessons',
+      'Mobile learning access',
+      'Unlimited practice sessions',
+      'Community support',
     ],
-    cta: 'Order Now',
+    cta: 'Start Learning',
     href: '/auth/signup',
-    popular: false,
-  },
-  {
-    name: 'Premium Box',
-    price: '$35',
-    description: 'Our most popular choice',
-    features: [
-      '10 lbs of premium varieties',
-      'Priority delivery',
-      'Apple care guide included',
-      'Free apple cider sample',
-      'Orchard tour discount',
-    ],
-    cta: 'Order Premium',
-    href: '/auth/signup?plan=premium',
     popular: true,
-  },
-  {
-    name: 'Orchard Club',
-    price: '$75',
-    description: 'For apple enthusiasts',
-    features: [
-      '20 lbs monthly subscription',
-      'Exclusive rare varieties',
-      'Monthly orchard events',
-      'Personal apple consultant',
-      'Custom apple products',
-    ],
-    cta: 'Join Club',
-    href: '/contact',
-    popular: false,
   },
 ]
 
@@ -53,14 +27,15 @@ export function Pricing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Fresh Apple Packages
+            Simple, Affordable Pricing
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose the perfect apple package for your family's needs and taste preferences.
+            Get full access to our AI-powered Chinese learning platform for just $5/month.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex justify-center">
+          <div className="max-w-md w-full">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -86,9 +61,7 @@ export function Pricing() {
                   <span className="text-4xl font-bold text-gray-900">
                     {plan.price}
                   </span>
-                  {plan.name === 'Orchard Club' && (
-                    <span className="text-gray-600">/month</span>
-                  )}
+                  <span className="text-gray-600">/month</span>
                 </div>
                 <p className="text-gray-600">{plan.description}</p>
               </div>
@@ -114,6 +87,7 @@ export function Pricing() {
               </Link>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>

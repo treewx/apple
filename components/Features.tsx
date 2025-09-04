@@ -1,33 +1,33 @@
 const features = [
   {
-    title: 'User Authentication',
-    description: 'Secure signup, login, and session management with NextAuth.js',
-    icon: '🔐',
+    title: 'Visual Learning',
+    description: 'AI-powered system that matches images to Chinese sounds for natural association',
+    icon: '🖼️',
   },
   {
-    title: 'PostgreSQL Database',
-    description: 'Robust database setup with Prisma ORM for data management',
-    icon: '🗃️',
+    title: 'Pronunciation Guide',
+    description: 'Native audio pronunciation for every character and phrase',
+    icon: '🎵',
   },
   {
-    title: 'Payment Gateway',
-    description: 'Stripe integration for subscriptions and one-time payments',
-    icon: '💳',
+    title: 'Progress Tracking',
+    description: 'Monitor your learning journey with detailed analytics and milestones',
+    icon: '📈',
   },
   {
-    title: 'Responsive Design',
-    description: 'Mobile-first design that looks great on all devices',
+    title: 'Spaced Repetition',
+    description: 'Smart review system that optimizes retention and long-term memory',
+    icon: '🔄',
+  },
+  {
+    title: 'Cultural Context',
+    description: 'Learn phrases in real-world situations with cultural background',
+    icon: '🏮',
+  },
+  {
+    title: 'Mobile Friendly',
+    description: 'Practice anywhere, anytime with our responsive mobile interface',
     icon: '📱',
-  },
-  {
-    title: 'Dashboard',
-    description: 'User dashboard with profile management and analytics',
-    icon: '📊',
-  },
-  {
-    title: 'Email Integration',
-    description: 'Email verification and transactional email support',
-    icon: '📧',
   },
 ]
 
@@ -37,10 +37,10 @@ export function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Everything You Need
+            Powerful Learning Features
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            A complete business template with all the essential features to get your startup running quickly.
+            Advanced tools designed to make learning Mandarin Chinese intuitive, effective, and enjoyable.
           </p>
         </div>
 

@@ -6,9 +6,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">🍎 Apple Orchard</h3>
+            <h3 className="text-2xl font-bold mb-4">🇨🇳 Learn Chinese Easy</h3>
             <p className="text-gray-400 mb-4">
-              Fresh, premium apples from our family orchard, delivered to your door with love and care.
+              Master Mandarin Chinese through our revolutionary AI-powered visual learning system.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">
@@ -24,42 +24,42 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Our Apples</h4>
+            <h4 className="text-lg font-semibold mb-4">Learning</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="#features" className="text-gray-400 hover:text-white">
-                  Apple Varieties
+                  How It Works
                 </Link>
               </li>
               <li>
                 <Link href="#pricing" className="text-gray-400 hover:text-white">
-                  Packages
+                  Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-gray-400 hover:text-white">
-                  Apple Products
+                <Link href="/dashboard" className="text-gray-400 hover:text-white">
+                  Learning Tool
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">Orchard</h4>
+            <h4 className="text-lg font-semibold mb-4">Support</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/about" className="text-gray-400 hover:text-white">
-                  Our Story
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/tours" className="text-gray-400 hover:text-white">
-                  Orchard Tours
+                <Link href="/help" className="text-gray-400 hover:text-white">
+                  Help Center
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-400 hover:text-white">
-                  Contact Us
+                  Contact Support
                 </Link>
               </li>
             </ul>
@@ -89,7 +89,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Apple Orchard. All rights reserved.
+            © 2024 Learn Chinese Easy. All rights reserved.
           </p>
         </div>
       </div>

@@ -23,7 +23,18 @@
       "Bash(npx dotenv -e .env.local -- npx prisma migrate dev:*)",
       "Bash(npm run:*)",
       "Read(/D:\\DEdward\\Projects2\\template/**)",
-      "Read(/D:\\DEdward\\Projects2\\template\\app/**)"
+      "Read(/D:\\DEdward\\Projects2\\template\\app/**)",
+      "Bash(git remote set-url:*)",
+      "Read(/D:\\DEdward\\Projects2\\template\\app/**)",
+      "Read(/D:\\DEdward\\Projects2\\template\\prisma/**)",
+      "Bash(npm install:*)",
+      "Bash(npx dotenv -e .env.local -- npx prisma db push:*)",
+      "Read(/D:\\DEdward\\Projects2\\template/**)",
+      "Read(/D:\\DEdward\\Projects2\\template\\components/**)",
+      "Read(/D:\\DEdward\\Projects2\\template\\components/**)",
+      "Read(/D:\\DEdward\\Projects2\\template\\components/**)",
+      "Read(/D:\\DEdward\\Projects2\\template\\components/**)",
+      "Read(/D:\\DEdward\\Projects2\\template\\components/**)"
     ],
     "deny": [],
     "ask": []
