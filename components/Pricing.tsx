@@ -2,46 +2,46 @@ import Link from 'next/link'
 
 const plans = [
   {
-    name: 'Starter',
-    price: 'Free',
-    description: 'Perfect for testing and small projects',
+    name: 'Family Pack',
+    price: '$15',
+    description: 'Perfect for small families',
     features: [
-      'Basic authentication',
-      'PostgreSQL database',
-      '1,000 API calls/month',
-      'Community support',
+      '5 lbs of mixed apple varieties',
+      'Free home delivery',
+      'Freshness guarantee',
+      'Basic customer support',
     ],
-    cta: 'Get Started',
+    cta: 'Order Now',
     href: '/auth/signup',
     popular: false,
   },
   {
-    name: 'Pro',
-    price: '$19',
-    description: 'Ideal for growing businesses',
+    name: 'Premium Box',
+    price: '$35',
+    description: 'Our most popular choice',
     features: [
-      'Advanced authentication',
-      'Unlimited API calls',
-      'Payment processing',
-      'Email support',
-      'Custom branding',
+      '10 lbs of premium varieties',
+      'Priority delivery',
+      'Apple care guide included',
+      'Free apple cider sample',
+      'Orchard tour discount',
     ],
-    cta: 'Start Pro Trial',
-    href: '/auth/signup?plan=pro',
+    cta: 'Order Premium',
+    href: '/auth/signup?plan=premium',
     popular: true,
   },
   {
-    name: 'Enterprise',
-    price: 'Custom',
-    description: 'For large-scale applications',
+    name: 'Orchard Club',
+    price: '$75',
+    description: 'For apple enthusiasts',
     features: [
-      'Everything in Pro',
-      'Custom integrations',
-      'Dedicated support',
-      'SLA guarantee',
-      'White-label option',
+      '20 lbs monthly subscription',
+      'Exclusive rare varieties',
+      'Monthly orchard events',
+      'Personal apple consultant',
+      'Custom apple products',
     ],
-    cta: 'Contact Sales',
+    cta: 'Join Club',
     href: '/contact',
     popular: false,
   },
@@ -53,10 +53,10 @@ export function Pricing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Simple, Transparent Pricing
+            Fresh Apple Packages
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that works best for your business needs.
+            Choose the perfect apple package for your family's needs and taste preferences.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export function Pricing() {
                   <span className="text-4xl font-bold text-gray-900">
                     {plan.price}
                   </span>
-                  {plan.price !== 'Custom' && plan.price !== 'Free' && (
+                  {plan.name === 'Orchard Club' && (
                     <span className="text-gray-600">/month</span>
                   )}
                 </div>

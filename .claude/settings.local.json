@@ -21,7 +21,9 @@
       "Bash(set DATABASE_URL=postgresql://postgres:yXnTnywdTmJjFSqdfGNcEiAvagmqmYOo@postgres.railway.internal:5432/railway)",
       "Bash(set DATABASE_URL=postgresql://postgres:yXnTnywdTmJjFSqdfGNcEiAvagmqmYOo@switchyard.proxy.rlwy.net:20935/railway)",
       "Bash(npx dotenv -e .env.local -- npx prisma migrate dev:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Read(/D:\\DEdward\\Projects2\\template/**)",
+      "Read(/D:\\DEdward\\Projects2\\template\\app/**)"
     ],
     "deny": [],
     "ask": []

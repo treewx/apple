@@ -7,8 +7,8 @@ import { Toaster } from 'react-hot-toast'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Business Template',
-  description: 'A complete business website template with authentication, payments, and more',
+  title: 'Apple Orchard - Premium Apple Products',
+  description: 'Discover the finest selection of fresh apples, apple products, and orchard experiences. From crisp Honeycrisp to tart Granny Smith, we deliver nature\'s perfect fruit.',
 }
 
 export default function RootLayout({
