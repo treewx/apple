@@ -7,8 +7,8 @@ import { Toaster } from 'react-hot-toast'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Apple Orchard - Premium Apple Products',
-  description: 'Discover the finest selection of fresh apples, apple products, and orchard experiences. From crisp Honeycrisp to tart Granny Smith, we deliver nature\'s perfect fruit.',
+  title: 'Learn Chinese Easy - Interactive Language Learning',
+  description: 'Master Mandarin Chinese with our interactive language learning app. Features camera-like interface, dynamic translation, audio pronunciation, and visual syllable breakdown.',
 }
 
 export default function RootLayout({
